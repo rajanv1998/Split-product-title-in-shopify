@@ -1,0 +1,7 @@
+{% assign titles = product.title | split: " - " %}
+{% if titles.size > 1 %}
+<span> {{ titles[0] }}</span><br>
+<span> {{ titles[1] }}</span>
+{% else %}
+<span>{{ product.title | strip_html | escape }}</span>
+{% endif %}
